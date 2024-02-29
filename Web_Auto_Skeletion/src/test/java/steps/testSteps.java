@@ -14,7 +14,7 @@ import java.util.Set;
 public class testSteps {
 
 
-    protected WebDriver driver = Utils.driver.getDriver();
+    protected WebDriver driver = utils.driver.getDriver();
     testPOM xq = new testPOM(driver);
 
 
@@ -39,27 +39,27 @@ public class testSteps {
     }
 
     @And("Click to Muraciet Et")
-    public void clickMuracietETBtn() throws InterruptedException {
+    public void ClickMuracietETBtn() throws InterruptedException {
         xq.Muraciet();
     }
 
     @And("Click Ipoteka novu Label")
-    public void clickToIpotekaNovuLabel() throws InterruptedException {
+    public void ClickToIpotekaNovuLabel() throws InterruptedException {
         xq.IpotekaNovu();
     }
 
     @And("Choose ipotekanin novu")
-    public void chooseipotekaninnovu() throws InterruptedException {
+    public void Chooseipotekaninnovu() throws InterruptedException {
         xq.Types_of_mortgages();
     }
 
     @And("Fill Fin kod")
-    public void clickFinkod() throws InterruptedException {
+    public void ClickFinkod() throws InterruptedException {
         xq.Fin();
     }
 
     @And("Fill  Number")
-    public void fillnumber() throws InterruptedException {
+    public void Fillnumber() throws InterruptedException {
         xq.Number();
     }
     @And("Click Aile Veziyyeti")
