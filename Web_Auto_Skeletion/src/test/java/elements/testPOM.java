@@ -14,7 +14,7 @@ public class testPOM {
     WebElement ClickMortagageBtn;
 
 
-    public void ClickMortagageBtn() throws InterruptedException {
+    public void ClickMortagageBtn()  {
         ClickMortagageBtn.click();
     }
 
