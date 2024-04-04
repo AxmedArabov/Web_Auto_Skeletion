@@ -1,11 +1,13 @@
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import org.junit.AfterClass;
 import org.junit.runner.RunWith;
-    @RunWith(Cucumber.class)
+import org.openqa.selenium.WebDriver;
+
+@RunWith(Cucumber.class)
     @CucumberOptions(
-            plugin = {"html:target/cucumber.html"},
             features = "src/test/resources/features",
-            glue = {"steps"},
+            glue = {"steps","driver","utils"},
             tags = "@Axmed"
     )
     public class TestRunner {}

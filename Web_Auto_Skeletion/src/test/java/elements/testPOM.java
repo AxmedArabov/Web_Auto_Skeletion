@@ -1,15 +1,143 @@
 package elements;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class testPOM {
 
+    WebDriver driver;
+
     public testPOM(WebDriver driver){
+        this.driver = driver;
+
         PageFactory.initElements(driver, this);
     }
+    @FindBy(xpath = "//input[@id='search']")
+    WebElement clickAndEnterData;
+
+
+    public void clickAndEnterData () throws InterruptedException {
+        Thread.sleep(3000);
+        clickAndEnterData.click();
+        clickAndEnterData.sendKeys("Zaqatala");
+    }
+
+
+
+    @FindBy(xpath = "//input[@id='pass']")
+    WebElement clickAndFillData;
+    public void clickAndFillData () throws InterruptedException {
+        Thread.sleep(3000);
+        clickAndFillData.click();
+    }
+
+
+    @FindBy(xpath = "//button[@id='search-icon-legacy']/yt-icon[@class='style-scope ytd-searchbox']//div[1]")
+    WebElement clickSearch;
+    public void clickSearch () throws InterruptedException {
+        Thread.sleep(3000);
+        clickSearch.click();
+    }
+
+
+    @FindBy(xpath = "//ytd-item-section-renderer[@class='style-scope ytd-section-list-renderer']/div[@id='contents']/ytd-video-renderer[1]//ytd-thumbnail[@class='style-scope ytd-video-renderer']//img[1]")
+    WebElement enterVideo;
+    public void enterVideo () throws InterruptedException {
+        Thread.sleep(3000);
+        enterVideo.click();
+        Thread.sleep(25000);
+    }
+
+
+
+
+
+
+
+
+
+
+    /*
+    @FindBy(xpath = "//input[@name='Passwd']")
+    WebElement fillPassword;
+    public void fillPassword() throws InterruptedException {
+        Thread.sleep(3000);
+        fillPassword.click();
+        fillPassword.sendKeys("Zaqatala0062!!!");
+    }
+    @FindBy(xpath = "//span[.='Next']")
+    WebElement clickNextt;
+    public void clickNextt() throws InterruptedException {
+        Thread.sleep(3000);
+        clickNextt.click();
+    }
+
+    @FindBy(xpath = "//div[@role='button' and text()='Compose']")
+    WebElement clickCompose;
+    public void clickCompose() throws InterruptedException {
+        Thread.sleep(6000);
+        clickCompose.click();
+    }
+
+    @FindBy(xpath = "//input[@class='agP aFw']")
+    WebElement clickToFillMail;
+    public void clickToFillMail() throws InterruptedException {
+        Thread.sleep(3000);
+        clickToFillMail.click();
+        clickToFillMail.sendKeys("erebov.ahmed@gmail.com");
+        clickToFillMail.click();
+    }
+
+    @FindBy(xpath = "//div[@class='aL8']/b[.='erebov.ahmed@gmail.com']")
+    WebElement chooseMail;
+    public void chooseMail() throws InterruptedException {
+        Thread.sleep(3000);
+        chooseMail.click();
+    }
+
+
+    @FindBy(xpath = "//input[@name='subjectbox']")
+    WebElement clickSubject;
+    public void clickSubject() throws InterruptedException {
+        Thread.sleep(3000);
+        clickSubject.click();
+        clickSubject.sendKeys("Test Task");
+    }
+
+
+    @FindBy(xpath = "//div[@class='Am aiL Al editable LW-avf tS-tW']")
+    WebElement clickAndFillTitle;
+    public void clickAndFillTitle() throws InterruptedException {
+        Thread.sleep(3000);
+        clickAndFillTitle.click();
+        clickAndFillTitle.sendKeys("Test Task Done buyrun Nihad bey)");
+    }
+
+
+    @FindBy(xpath = "//div[@class='T-I J-J5-Ji aoO v7 T-I-atl L3 T-I-JO T-I-Zf-aw2']")
+    WebElement clickSend;
+    public void clickSend() throws InterruptedException {
+        Thread.sleep(3000);
+        clickSend.click();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
     @FindBy(xpath = "//a[contains(text(),'MORTGAGE LOANS')]")
     WebElement ClickMortagageBtn;
 
@@ -128,6 +256,8 @@ public class testPOM {
         Thread.sleep(3000);
         Result.isDisplayed();
     }
+
+     */
 }
 
 

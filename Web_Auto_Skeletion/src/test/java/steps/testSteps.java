@@ -1,28 +1,129 @@
 package steps;
 
 import elements.testPOM;
+import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-
-import java.util.Set;
-
-
-public class testSteps {
+import org.openqa.selenium.chrome.ChromeDriver;
+import utils.DriverConfig;
 
 
-    protected WebDriver driver = utils.driver.getDriver();
+public class testSteps  {
+
+    public ChromeDriver driver = (ChromeDriver) DriverConfig.setupDriver();
+
     testPOM xq = new testPOM(driver);
 
+    public testSteps() throws InterruptedException {
 
-    @Given("go to kapitalbank az")
-    public void go_to_kapitalbank_az() {
-        driver.get("https://www.kapitalbank.az/en/");
     }
 
+
+    @Given("go to Youtube")
+    public void go_to_Gmail_com() {
+        driver.get("https://www.youtube.com/");
+
+    }
+
+    @When("Click and enter data")
+    public void clickAndEnterData() throws InterruptedException {
+        xq.clickAndEnterData();
+    }
+
+    @And("Click Search")
+    public void clickSearch() throws InterruptedException {
+        xq.clickSearch();
+    }
+
+    @And("Enter Video")
+    public void enterVideo() throws InterruptedException{
+        xq.enterVideo();
+
+    }
+
+}
+
+
+/*
+
+
+    @When("Click Status")
+    public void EmailorPhone() throws InterruptedException {
+        xq.EmailorPhone();
+    }
+
+    @And("Click Next")
+    public void clickNext() throws InterruptedException{
+        xq.clickNext();
+    }
+
+    @And("Fill Password")
+    public void fillPassword() throws InterruptedException {
+        xq.fillPassword();
+    }
+    @And("Click Nextt")
+    public void clickNextt() throws InterruptedException{
+        xq.clickNextt();
+    }
+
+    @And("Click Compose")
+    public void clickCompose() throws InterruptedException {
+        xq.clickCompose();
+    }
+
+    @And("Click To Fill Mail")
+    public void clickToFillMail() throws InterruptedException {
+        xq.clickToFillMail();
+    }
+    @And("Choose Mail")
+    public void chooseMail()throws InterruptedException {
+        xq.chooseMail();
+    }
+    @And("Click and Fill Subject")
+    public void clickSubject() throws InterruptedException {
+        xq.clickSubject();
+    }
+
+    @And("Click and Fill Title")
+    public void clickAndFillTitle() throws InterruptedException {
+        xq.clickAndFillTitle();
+    }
+
+    @Then("Click Send")
+    public void clickSend() throws InterruptedException {
+        xq.clickSend();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
     @When("Click Mortagage loans")
     public void Click_Mortagage_Loans() throws InterruptedException {
         xq.ClickMortagageBtn();
@@ -113,4 +214,8 @@ public class testSteps {
     public void seeTheResult() throws InterruptedException {
         xq.Results();
     }
-}
+
+ */
+
+
+
